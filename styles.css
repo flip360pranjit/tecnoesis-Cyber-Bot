@@ -1,0 +1,66 @@
+
+/********************************************** Body element *******************************************/
+
+body
+{
+    background: url(./assets/bg.jpg);
+    background-size: contain;
+}
+
+
+/***************************************** Styling the defined classes ********************************/
+.hulk
+{
+    background: url(./assets/hulkSprite.png);
+    width: 360px;
+    height: 535px;
+    animation: throw 5s steps(5) infinite;
+    animation-direction: reverse;
+    display: inline-block;
+}
+.missile
+{
+    background: url(./assets/missile.png);
+    width: 352px;
+    height: 120px;
+    display: inline-block;
+    position: absolute;
+    animation: forward 5s linear infinite;
+    animation-delay: 3s;
+}
+
+.heading
+{
+    display: flex;
+    justify-content: center;
+}
+.heading img
+{
+    height: 200px;
+}
+
+
+/******************************************* Defining the animations **********************************/
+
+@keyframes throw
+{
+    0%
+    {
+        background-position: 0px;
+    }
+    100%
+    {
+        background-position: 2000px;
+    }
+}
+@keyframes forward
+{
+    0%
+    {
+        transform: translateX(-100px);
+    }
+    100%
+    {
+        transform: translateX(1200px);
+    }
+}
